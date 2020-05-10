@@ -32,8 +32,8 @@ mongoose.connect("mongodb+srv://JakeM:"+process.env.MONGO_ATLAS_PASSWORD +"@clus
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
-app.use('/uploads', express.static(path.join(__dirname,'uploads')));
-app.use('/', express.static(path.join(__dirname,'angular')));
+app.use("/uploads", express.static(path.join(__dirname,"uploads")));
+app.use("/", express.static(path.join(__dirname,"angular")));
 
 
 app.use((req, res, next) => {
